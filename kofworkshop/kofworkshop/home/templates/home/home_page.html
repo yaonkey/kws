@@ -3,7 +3,15 @@
 {% load wagtailcore_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
+<header>
+    <p>this header</p>
+</header>
+<main>
+    {% block content %}
 
-{% block content %}
-    {{ page.post|richtext }}
-{% endblock %}
+        {{ page.post|richtext }}
+    {% endblock %}
+</main>
+<footer>
+    <p>This footer</p>
+</footer>
